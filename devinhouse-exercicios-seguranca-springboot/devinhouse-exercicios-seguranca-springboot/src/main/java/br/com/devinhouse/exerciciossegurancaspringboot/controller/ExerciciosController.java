@@ -16,6 +16,12 @@ public class ExerciciosController {
 		return ResponseEntity.ok("Bem vindo aos nossos exercicios sobre Autorização e Autenticação de uma aplicação Client");
 	}
 
+	@RolesAllowed("user")
+	@GetMapping("/role/user")
+	public ResponseEntity<String> usuariosDaRoleUser(){
+		return ResponseEntity.ok("Usuários da Role user");
+	}
+
 	@RequestMapping(value = "/anonymous", method = RequestMethod.GET)
 	public ResponseEntity<String> getAnonymous() {
 		return ResponseEntity.ok("Hello Anonymous");
