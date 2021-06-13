@@ -16,7 +16,7 @@ public class ExerciciosController {
 		return ResponseEntity.ok("Bem vindo aos nossos exercicios sobre Autorização e Autenticação de uma aplicação Client");
 	}
 
-	@RolesAllowed("user")
+	@RolesAllowed("usuario-funcionario")
 	@GetMapping("/role/user")
 	public ResponseEntity<String> usuariosDaRoleUser(){
 		return ResponseEntity.ok("Usuários da Role user");
